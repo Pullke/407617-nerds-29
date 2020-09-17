@@ -29,17 +29,28 @@
 }
 
 @font-face {
-    font-family: "Roboto";
-    src:
-    url("fonts/roboto.woff2"),
-    url("fonts/roboto.woff"),
-    url("fonts/robotobold.woff2"),
-    url("fonts/robotobold.woff"),
-    url("fonts/robotomedium.woff2"),
-    url("fonts/robotomedium.woff");
-   }
+  font-family: "Roboto";
+  src:
+    url("../fonts/roboto.woff2"),
+    url("../fonts/roboto.woff");
+  font-weight: 400;
+}
 
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("../fonts/robotobold.woff2"),
+    url("../fonts/robotobold.woff");
+  font-weight: 700;
+}
 
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("../fonts/robotomedium.woff2"),
+    url("../fonts/robotomedium.woff");
+  font-weight: 500;
+}
 
 .page {
   min-width: 960px;
