@@ -329,7 +329,17 @@ th span {
 }
 
 .sorting-item a {
-  color: var(--active-black);
+  color: var(--basic-black);
+  opacity: .3;
+}
+
+.sorting-item a:hover {
+  color: var(--basic-black);
+  opacity: .6;
+}
+
+.sorting-item a:active {
+  color: var(--basic-black);
 }
 
 /*
