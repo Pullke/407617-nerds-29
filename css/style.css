@@ -19,11 +19,18 @@
   --hover-gray: #DFDFDF;
   --hover-form-border: #B4B9BB;
 
+  --active-black: rgba(0,0,0, 0.3);
+  --active-white: rgba(255,255,255, 0.3);
   --active-red: #D7373B;
   --active-green: #00AA62;
   --active-yellow: #E5A722;
   --active-gray: #D5D5D5;
   --active-logo: #A6A6A6;
+
+  --pagination-active: #DBDBDB;
+
+  --inner-shadow: rgba(0, 1, 1, .1);
+  --contacts-text: #666666;
 
   --special: #4D4D4D;
 }
@@ -52,8 +59,10 @@
   font-weight: 500;
 }
 
+/*Global*/
+
 .page {
-  min-width: 960px;
+  min-width: 1160px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -62,4 +71,325 @@
   font-weight: 400;
   color: var(--basic-extra-dark);
   background-color: var(--basic-white);
+}
+
+.page-body a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*Main header*/
+
+.main-header {
+  background-color: var(--basic-gray);
+}
+
+/*Main navigation*/
+
+.main-navigation {
+  line-height: 30px;
+  font-weight: 500;
+}
+
+/*Site navigation*/
+
+.site-navigation,
+.user-cart {
+  list-style: none;
+}
+
+/*User navigation*/
+
+.site-navigation a,
+.user-cart a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.user-cart a:hover {
+  color: var(--basic-red);
+}
+
+.main-navigation a:active,
+.user-cart a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.site-navigation-current {
+  cursor: default;
+}
+
+/*Button*/
+
+.button {
+  display: inline-block;
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  border: none;
+  border-radius: 3px;
+}
+
+.button:hover {
+  background-color: var(--hover-red);
+}
+
+.button:active {
+  color: var(--active-white);
+  background-color: var(--active-red);
+  box-shadow: inset 0 3px var(--inner-shadow);
+}
+
+/*Slider*/
+
+.slider-list,
+.slider-button {
+  list-style: none;
+}
+
+.slider-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--basic-black);
+}
+
+/*Features*/
+
+.features-list {
+  list-style: none;
+}
+
+.features-title{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+/*Features button*/
+
+.button-apps {
+  background-color: var(--basic-green);
+}
+
+.button-apps:hover {
+  background-color: var(--hover-green);
+}
+
+.button-apps:active {
+  background-color: var(--active-green);
+}
+
+.button-presentations {
+  background-color: var(--basic-yellow);
+}
+
+.button-presentations:hover {
+  background-color: var(--hover-yellow);
+}
+
+.button-presentations:active {
+  background-color: var(--active-yellow);
+}
+
+/*About*/
+
+.about-title {
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
+  color: var(--basic-black);
+}
+
+.order-list-title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.about-illustration caption {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+table th {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 64px;
+  color: var(--basic-black);
+}
+
+th span {
+  font-size: 26px;
+  line-height: 40px;
+}
+
+/*Partner*/
+
+.partner-item img:hover {
+  opacity: 0.2;
+}
+
+.partner-item img:active {
+  opacity: 0.1;
+}
+
+/*Footer*/
+
+.contacts-title {
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.contacts-adress,
+.contacts-phone {
+  color: var(--contacts-text);
+}
+
+/*Social*/
+
+.social-list {
+  list-style: none;
+}
+
+.social-link-wrap {
+  width: 81px;
+  height: 81px;
+  background-color: var(--basic-social);
+  border-radius: 50px;
+}
+
+.social-item {
+  width: 81px;
+  height: 81px;
+  background-color: var(--basic-social);
+  border-radius: 50px;
+}
+
+.social-item:hover {
+  background-color: var(--hover-red);
+}
+
+.social-item:active {
+  background-color: var(--active-red);
+}
+
+/*
+.social-item img {
+  position: relative;
+  top: 28px;
+  left: 28px;
+}
+*/
+
+.footer-appeal {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+  color: var(--basic-black);
+}
+
+.footer-discount {
+  line-height: 22px;
+  color: var(--basic-form-field);
+}
+
+/*Catalog*/
+
+.page-title {
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+  color: var(--basic-black);
+  background-color: var(--basic-gray);
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-title {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--basic-black);
+}
+
+.sorting-item {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.sorting-item a {
+  color: var(--active-black);
+}
+
+/*
+.sorting-current {
+  color: var(--basic-black);
+}
+*/
+
+.sorting-switch {
+  list-style: none;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item-title a {
+  color: var(--basic-black);
+}
+
+.catalog-item-title a:hover {
+  color: var(--basic-red);
+}
+
+.catalog-item-title a:active {
+  color: var(--active-black);
+}
+
+.catalog-item-text {
+  color: var(--contacts-text);
+}
+
+.modal-button:active {
+  color: var(--basic-white);
+}
+
+/*Pagination*/
+
+.pagination {
+  list-style: none;
+}
+
+.pagination a {
+  font-weight: 500;
+  color: var(--basic-black);
+  background-color: var(--basic-gray);
+}
+
+.pagination a:hover {
+  background-color: var(--hover-gray);
+}
+
+.pagination a:active {
+  color: var(--active-black);
+  background-color: var(--active-gray);
+}
+
+.pagination-item-current a {
+  background-color: var(--basic-white);
+  border: 3px solid var(--pagination-active);
+  border-radius: 3px;
+  cursor: default;
 }

@@ -21,24 +21,26 @@
           <li>
             <a href="">Клиенты</a>
           </li>
-          <li>
+          <li class="site-navigation-current">
             <a>Магазин</a>
           </li>
           <li>
             <a href="">Контакты</a>
           </li>
         </ul>
-        <ul>
+        <ul class="user-cart">
           <li>
-            <a href="">Корзина</a>
+            <a class="cart-link" href="">Корзина</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page-catalog container">
+      <div class="page-title-box">
+        <h1 class="page-title">Магазин готовых шаблонов</h1>
+      </div>
 
-      <h1 class="page-title">Магазин готовых шаблонов</h1>
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
@@ -48,11 +50,13 @@
       </section>
 
       <section class="catalog">
+
         <h2 class="visually-hidden">Каталог</h2>
+
         <p class="sorting-title">Сортировать:</p>
         <ul class="sorting-list">
           <li class="sorting-item">
-            <a href="">По цене</a>
+            <a class="sorting-current" href="">По цене</a>
           </li>
           <li class="sorting-item">
             <a href="">По типу</a>
@@ -61,6 +65,18 @@
             <a href="">По названию</a>
           </li>
         </ul>
+
+        <!-- Кнопки сортировки -->
+
+        <ul class="sorting-switch">
+          <li>
+            <button type="button"></button>
+          </li>
+          <li>
+            <button type="button"></button>
+          </li>
+        </ul>
+
         <ul class="catalog-list">
           <li class="catalog-item">
             <img src="https://via.placeholder.com/360x616" width="360" height="616" alt="Макет «Sedona»">
@@ -79,7 +95,7 @@
                 <a href="">Pink App</a>
               </h3>
               <p class="catalog-item-text">Продуктовый лендинг приложения для iOS и Android</p>
-              <a class="button" href="">9 900 ₽</a>
+              <a class="button modal-button" href="">9 900 ₽</a>
             </div>
           </li>
           <li class="catalog-item">
@@ -124,59 +140,65 @@
           </li>
         </ul>
         <ul class="pagination">
-          <li class="pagination-item">
-            <a>1</a>
+          <li class="pagination-item pagination-item-current">
+            <a class="button">1</a>
           </li>
           <li class="pagination-item">
-            <a href="">2</a>
+            <a class="button" href="">2</a>
           </li>
           <li class="pagination-item">
-            <a href="">3</a>
+            <a class="button" href="">3</a>
           </li>
-          <li class="button">
-            <a href="">Следующая</a>
+          <li class="pagination-item">
+            <a class="button" href="">Следующая</a>
           </li>
         </ul>
       </section>
 
     </main>
 
-    <footer class="page-footer inner-footer">
+    <section class="contacts">
+      <h2 class="visually-hidden">Контактная информация</h2>
 
-      <section class="contacts">
-        <h2 class="visually-hidden">Контактная информация</h2>
+      <!-- Здесь будет карта проезда -->
 
-        <!-- Здесь будет карта проезда -->
+      <div class="contacts-box">
+        <h3 class="contacts-title">Nёrds design studio</h3>
+        <p class="contacts-adress">
+          191186, Санкт-Петербург, <br>
+           ул. Б. Конюшенная, д. 19/8
+        </p>
+        <p class="contacts-phone">
+          тел.+7 (812) 275-75-75
+        </p>
+        <a class="button" href="">Напишите нам</a>
+      </div>
+    </section>
 
-        <div class="contacts-box">
-          <h3 class="contacts-title">NЁRDS DESIGN STUDIO</h3>
-          <p class="contacts-adress">
-            191186, Санкт-Петербург, <br>
-             ул. Б. Конюшенная, д. 19/8
-          </p>
-          <p class="contacts-phone">
-            тел.+7 (812) 275-75-75
-          </p>
-          <a class="button" href="">Напишите нам</a>
-        </div>
-      </section>
+    <section class="social">
 
-      <section class="social">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="">ВКонтакте</a>
-          </li>
-          <li class="social-item">
-            <a href="">Facebook</a>
-          </li>
-          <li class="social-item">
-            <a href="">Instagram</a>
-          </li>
-        </ul>
-        <p class="footer-appeal">Давайте дружить, это выгодно!</p>
-        <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
-      </section>
+      <h2 class="visually-hidden">Социальные сети</h2>
+
+      <ul class="social-list">
+        <li class="social-item">
+          <a class="vk" href="">
+            <img src="img/vk-icon.svg" alt="">
+          </a>
+        </li>
+        <li class="social-item">
+          <a class="fb" href="">
+            <img src="img/fb-icon.svg" alt="">
+          </a>
+        </li>
+        <li class="social-item">
+          <a class="insta" href="">
+            <img src="img/insta-icon.svg" alt="">
+          </a>
+        </li>
+      </ul>
+      <p class="footer-appeal">Давайте дружить, это выгодно!</p>
+      <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
+    </section>
     </footer>
 
     <section class="modal modal-form">
