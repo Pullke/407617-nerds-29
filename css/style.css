@@ -159,6 +159,18 @@
   color: var(--basic-black);
 }
 
+.slider-one {
+  background-image: url(../img/nerds-index-slide.webp);
+}
+
+.slider-two {
+  background-image: url(../img/nerds-index-slide2.webp);
+}
+
+.slider-three {
+  background-image: url(../img/nerds-index-slide3.webp);
+}
+
 /*Features*/
 
 .features-list {
@@ -266,28 +278,43 @@ th span {
   border-radius: 50px;
 }
 
-.social-item {
+
+.social-item a {
+  display: block;
+  position: relative;
   width: 81px;
   height: 81px;
   background-color: var(--basic-social);
-  border-radius: 50px;
+  border-radius: 41px;
 }
 
-.social-item:hover {
+.social-item a:hover {
   background-color: var(--hover-red);
 }
 
-.social-item:active {
+.social-item a:active {
   background-color: var(--active-red);
 }
 
-/*
-.social-item img {
-  position: relative;
-  top: 28px;
-  left: 28px;
+.vkontakte-link {
+  background-image: url(../img/vk-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
-*/
+
+.facebook-link {
+  background-image: url(../img/fb-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.instagram-link {
+  background-image: url(../img/insta-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 
 .footer-appeal {
   font-size: 36px;
@@ -328,17 +355,17 @@ th span {
   line-height: 18px;
 }
 
-.sorting-item a {
+.sorting-link {
   color: var(--basic-black);
-  opacity: .3;
+  opacity: 0.3;
 }
 
-.sorting-item a:hover {
+.sorting-link:hover {
   color: var(--basic-black);
-  opacity: .6;
+  opacity: 0.6;
 }
 
-.sorting-item a:active {
+.sorting-link .current {
   color: var(--basic-black);
 }
 
@@ -382,24 +409,29 @@ th span {
   list-style: none;
 }
 
-.pagination a {
+.pagination-button {
   font-weight: 500;
   color: var(--basic-black);
   background-color: var(--basic-gray);
 }
 
-.pagination a:hover {
+.pagination-button:hover {
   background-color: var(--hover-gray);
 }
 
-.pagination a:active {
+.pagination-button:active {
   color: var(--active-black);
   background-color: var(--active-gray);
 }
 
-.pagination-item-current a {
+.disabled {
   background-color: var(--basic-white);
   border: 3px solid var(--pagination-active);
   border-radius: 3px;
   cursor: default;
+}
+
+.disabled:hover,
+.disabled:active {
+  background-color: var(--basic-white);
 }
