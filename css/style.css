@@ -80,6 +80,17 @@
 
 /*Main header*/
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
 .main-header {
   background-color: var(--basic-gray);
 }
@@ -160,21 +171,35 @@
 }
 
 .slider-one {
-  background-image: url(../img/nerds-index-slide.webp);
+  background-image: url("../img/nerds-index-slide1.webp");
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: 50%;
 }
 
 .slider-two {
-  background-image: url(../img/nerds-index-slide2.webp);
+  background-image: url("../img/nerds-index-slide2.webp");
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: 50%;
 }
 
 .slider-three {
-  background-image: url(../img/nerds-index-slide3.webp);
+  background-image: url("../img/nerds-index-slide3.webp");
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: 50%;
 }
 
 /*Features*/
 
+
 .features-list {
   list-style: none;
+}
+
+.features-item {
+
 }
 
 .features-title{
@@ -220,30 +245,38 @@
   color: var(--basic-black);
 }
 
+.order-list {
+  list-style-image: url(../img/rectangle.png);
+}
+
 .order-list-title {
   text-transform: uppercase;
   font-weight: 700;
 }
 
-.about-illustration caption {
+.about-illustration .about-table-caption {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--basic-black);
 }
 
-table th {
+.about-table .about-table-head {
   font-size: 45px;
   font-weight: 700;
   line-height: 64px;
   color: var(--basic-black);
 }
 
-th span {
+.about-table-head .percent {
   font-size: 26px;
   line-height: 40px;
 }
 
 /*Partner*/
+
+.partners-list {
+  list-style: none;
+}
 
 .partner-item img:hover {
   opacity: 0.2;
