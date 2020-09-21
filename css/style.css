@@ -175,7 +175,7 @@
   color: var(--basic-black);
 }
 
-.slider-one {
+/* .slider-one {
   background-image: url("../img/nerds-index-slide1.webp");
   background-size: contain;
   background-repeat:no-repeat;
@@ -194,7 +194,7 @@
   background-size: contain;
   background-repeat:no-repeat;
   background-position: 50%;
-}
+}*/
 
 /*Features*/
 
