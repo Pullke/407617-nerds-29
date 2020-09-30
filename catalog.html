@@ -18,14 +18,14 @@
               <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс».">
             </a>
             <ul class="site-navigation">
-              <li><a href="">Студия</a></li>
-              <li><a href="">Клиенты</a></li>
-              <li><a href="catalog.html">Магазин</a></li>
-              <li><a href="">Контакты</a></li>
+              <li><a class="site-navigation-link" href="">Студия</a></li>
+              <li><a class="site-navigation-link" href="">Клиенты</a></li>
+              <li><a class="site-navigation-link current-link">Магазин</a></li>
+              <li><a class="site-navigation-link" href="">Контакты</a></li>
             </ul>
             <div class="user-navigation">
               <ul class="user-cart">
-                <li><a class="cart-link" href="">Корзина</a></li>
+                <li><a class="user-navigation-link" href="">Корзина</a></li>
               </ul>
             </div>
           </div>
@@ -35,150 +35,154 @@
 
     <main class="page-catalog">
 
-      <div class="page-title-box">
+      <div class="page-title-wrapper">
         <h1 class="page-title">Магазин готовых шаблонов</h1>
       </div>
 
-      <div class="page-catalog-wrapper">
-        <section class="filters">
-          <h2 class="visually-hidden">Фильтры</h2>
+      <div class="container">
+        <div class="catalog-container-wrapper">
+          <section class="filters">
+            <h2 class="visually-hidden">Фильтры</h2>
 
-          <!-- Здесь будет форма -->
+            <!-- Здесь будет форма -->
 
-          <p class="catalog-form-title">Стоимость:</p>
+            <div class="catalog-form-wrapper">
+              <p class="catalog-form-title">Стоимость:</p>
+            </div>
+          </section>
 
-        </section>
+          <section class="catalog">
+            <h2 class="visually-hidden">Каталог</h2>
+              <div class="catalog-wrapper">
 
-        <section class="catalog">
+                <div class="catalog-sorting-wrapper">
+                  <p class="sorting-title">Сортировать:</p>
+                  <ul class="sorting-list">
+                    <li class="sorting-item">
+                      <a class="sorting-link current" href="">По цене</a>
+                    </li>
+                    <li class="sorting-item">
+                      <a class="sorting-link" href="">По типу</a>
+                    </li>
+                    <li class="sorting-item">
+                      <a class="sorting-link" href="">По названию</a>
+                    </li>
+                  </ul>
 
-          <h2 class="visually-hidden">Каталог</h2>
+                  <!-- Кнопки сортировки -->
 
-          <p class="sorting-title">Сортировать:</p>
-          <ul class="sorting-list">
-            <li class="sorting-item">
-              <a class="sorting-link current" href="">По цене</a>
-            </li>
-            <li class="sorting-item">
-              <a class="sorting-link" href="">По типу</a>
-            </li>
-            <li class="sorting-item">
-              <a class="sorting-link" href="">По названию</a>
-            </li>
-          </ul>
+                  <ul class="sorting-switch">
+                    <li class="button-down">
+                      <button type="button"></button>
+                    </li>
+                    <li class="button-up">
+                      <button type="button"></button>
+                    </li>
+                  </ul>
+                </div>
 
-          <!-- Кнопки сортировки -->
-
-          <ul class="sorting-switch">
-            <li>
-              <button type="button"></button>
-            </li>
-            <li>
-              <button type="button"></button>
-            </li>
-          </ul>
-
-          <ul class="catalog-list">
-            <li class="catalog-item">
-              <img src="img/layout-sedona-min.jpg" width="358" height="578" alt="Макет сайта «Sedona».">
-              <div class="catalog-item-popup">
-                <h3 class="catalog-item-title">
-                  <a href="">Sedona</a>
-                </h3>
-                <p class="catalog-item-text">Информационный сайт для туристов</p>
-                <a class="button modal-button" href="">9 900 ₽</a>
-              </div>
-            </li>
-            <li class="catalog-item">
-              <img src="img/layout-pink-min.jpg" width="358" height="578" alt="Макет сайта «Pink».">
-              <div class="catalog-item-popup">
-                <h3 class="catalog-item-title">
-                  <a href="">Pink App</a>
-                </h3>
-                <p class="catalog-item-text">Продуктовый лендинг приложения для iOS и Android</p>
-                <a class="button modal-button" href="">9 900 ₽</a>
-              </div>
-            </li>
-            <li class="catalog-item">
-              <img src="img/layout-borodinski-min.jpg" width="358" height="578" alt="Макет сайта «Бородинский».">
-              <div class="catalog-item-popup">
-                <h3 class="catalog-item-title">
-                  <a href="">Barbershop</a>
-                </h3>
-                <p class="catalog-item-text">Сайт салона красоты. Для мужчин, да.</p>
-                <a class="button modal-button" href="">9 900 ₽</a>
-              </div>
-            </li>
-            <li class="catalog-item">
-              <img src="img/layout-mishka-min.jpg" width="358" height="578" alt="Макет сайта «Mishka».">
-              <div class="catalog-item-popup">
-                <h3 class="catalog-item-title">
-                  <a href="">Mishka</a>
-                </h3>
-                <p class="catalog-item-text">Интернет-магазин вязаных игрушек</p>
-                <a class="button modal-button" href="">9 900 ₽</a>
-              </div>
-            </li>
-            <li class="catalog-item">
-              <img src="img/layout-aplus-min.jpg" width="358" height="578" alt="Макет сайта «А Плюс».">
-              <div class="catalog-item-popup">
-                <h3 class="catalog-item-title">
-                  <a href="">A Plus</a>
-                </h3>
-                <p class="catalog-item-text">Лендинг курсов повышения квалификации</p>
-                <a class="button modal-button" href="">9 900 ₽</a>
-              </div>
-            </li>
-            <li class="catalog-item">
-              <img src="img/layout-kvast-min.jpg" width="358" height="578" alt="Макет сайта «Кваст».">
-              <div class="catalog-item-popup">
-                <h3 class="catalog-item-title">
-                  <a href="">Кваст</a>
-                </h3>
-                <p class="catalog-item-text">Промо-сайт производителя крафтового кваса</p>
-                <a class="button modal-button" href="">9 900 ₽</a>
-              </div>
-            </li>
-          </ul>
+                <ul class="catalog-list">
+                  <li class="catalog-item">
+                    <img src="img/layout-sedona-min.jpg" width="358" height="578" alt="Макет сайта «Sedona».">
+                    <div class="catalog-item-popup">
+                      <h3 class="catalog-item-title">
+                        <a href="">Sedona</a>
+                      </h3>
+                      <p class="catalog-item-text">Информационный сайт для туристов</p>
+                      <a class="button modal-button" href="">9 900 ₽</a>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <img src="img/layout-pink-min.jpg" width="358" height="578" alt="Макет сайта «Pink».">
+                    <div class="catalog-item-popup">
+                      <h3 class="catalog-item-title">
+                        <a href="">Pink App</a>
+                      </h3>
+                      <p class="catalog-item-text">Продуктовый лендинг приложения для iOS и Android</p>
+                      <a class="button modal-button" href="">9 900 ₽</a>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <img src="img/layout-borodinski-min.jpg" width="358" height="578" alt="Макет сайта «Бородинский».">
+                    <div class="catalog-item-popup">
+                      <h3 class="catalog-item-title">
+                        <a href="">Barbershop</a>
+                      </h3>
+                      <p class="catalog-item-text">Сайт салона красоты. Для мужчин, да.</p>
+                      <a class="button modal-button" href="">9 900 ₽</a>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <img src="img/layout-mishka-min.jpg" width="358" height="578" alt="Макет сайта «Mishka».">
+                    <div class="catalog-item-popup">
+                      <h3 class="catalog-item-title">
+                        <a href="">Mishka</a>
+                      </h3>
+                      <p class="catalog-item-text">Интернет-магазин вязаных игрушек</p>
+                      <a class="button modal-button" href="">9 900 ₽</a>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <img src="img/layout-aplus-min.jpg" width="358" height="578" alt="Макет сайта «А Плюс».">
+                    <div class="catalog-item-popup">
+                      <h3 class="catalog-item-title">
+                        <a href="">A Plus</a>
+                      </h3>
+                      <p class="catalog-item-text">Лендинг курсов повышения квалификации</p>
+                      <a class="button modal-button" href="">9 900 ₽</a>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <img src="img/layout-kvast-min.jpg" width="358" height="578" alt="Макет сайта «Кваст».">
+                    <div class="catalog-item-popup">
+                      <h3 class="catalog-item-title">
+                        <a href="">Кваст</a>
+                      </h3>
+                      <p class="catalog-item-text">Промо-сайт производителя крафтового кваса</p>
+                      <a class="button modal-button" href="">9 900 ₽</a>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="pagination">
+                  <li class="pagination-item disabled">
+                    <a class="pagination-button">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-button" href="">2</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-button" href="">3</a>
+                  </li>
+                  <li class="pagination-item pagination-button-next">
+                    <a class="pagination-button" href="">Следующая</a>
+                  </li>
+                </ul>
+            </div>
+          </section>
+        </div>
       </div>
-        <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-button disabled">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-button" href="">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-button" href="">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-button pagination-button-next" href="">Следующая</a>
-          </li>
-        </ul>
-      </section>
-
     </main>
 
     <footer class="page-footer main-footer">
-
       <section class="contacts">
 
         <h2 class="visually-hidden">Контактная информация</h2>
 
         <div class="contacts-box-wrapper">
           <div class="contacts-box">
-            <div class="contacts-content-wrapper">
               <h3 class="contacts-title">Nёrds design studio</h3>
-              <p class="contacts-adress">
-                191186, Санкт-Петербург, <br>
-                 ул. Б. Конюшенная, д. 19/8
-              </p>
-              <p class="contacts-phone">
-                тел.
-                <a href="tel:+78122757575">+7 (812) 275-75-75</a>
-              </p>
+              <div class="contacts-text">
+                <p class="contacts-adress">
+                  191186, Санкт-Петербург, <br>
+                   ул. Б. Конюшенная, д. 19/8
+                </p>
+                <p class="contacts-phone">
+                  тел.
+                  <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+                </p>
+              </div>
               <a class="button button-contacts" href="">Напишите нам</a>
             </div>
-          </div>
         </div>
       </section>
 
@@ -186,7 +190,6 @@
 
         <h2 class="visually-hidden">Социальные сети</h2>
 
-        <div class="social-list-wrapper">
           <ul class="social-list">
             <li class="social-item">
               <a class="vkontakte-link" href="">
@@ -204,7 +207,7 @@
               </a>
             </li>
           </ul>
-        </div>
+
         <div class="social-text">
           <p class="footer-appeal">Давайте дружить, это выгодно!</p>
           <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
