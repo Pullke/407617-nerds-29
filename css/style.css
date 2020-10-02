@@ -119,9 +119,6 @@ img {
 }
 
 .main-navigation-wrapper {
-  /* display: grid;
-  grid-template-columns: min-content 1fr min-content; */
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -140,12 +137,6 @@ img {
 }
 
 .site-navigation {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 45px;
-  justify-self: center;
-  align-self: center; */
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -164,12 +155,16 @@ img {
 
 /* User navigation */
 
+
+
 .user-cart {
+  position: relative;
   margin: 0;
   padding: 0;
   padding-bottom: 19px;
   list-style: none;
 }
+
 
 /* Pseudo-class navigation */
 
@@ -195,6 +190,21 @@ img {
   opacity: 1;
   user-select: none;
 }
+
+.user-navigation-link::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/cart-icon.svg);
+  top: 4px;
+  left: -40px;
+  width: 15px;
+  height: 15px;
+}
+/* Придумать решение */
+.user-navigation-link:active::before {
+  opacity: 1;
+}
+
 
 /* Button */
 
@@ -352,7 +362,6 @@ img {
 }
 
 .slider-controls .current::before {
-  /* box-sizing: border-box; */
   content: "";
   position: absolute;
   left: 5px;
