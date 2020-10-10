@@ -903,17 +903,14 @@ img {
   margin-bottom: 15px;
 }
 
-.radio-wrap {
-  margin: 54px 0 46px;
+.filter-item legend:nth-child(2n) {
+  margin-top: 54px;
+  margin-bottom: 13px;
 }
 
-.radio-wrap legend,
-.checkbox-wrap legend {
-  margin-bottom: 16px;
-}
-
-.checkbox-wrap {
-  margin-bottom: 50px;
+.filter-item legend:last-child {
+  margin-top: 46px;
+  margin-bottom: 13px;
 }
 
 .check-box {
@@ -993,7 +990,13 @@ img {
   opacity: .1;
 }
 
+.last {
+  margin-bottom: 0;
+}
+
 .filter-button {
+  margin-top: 35px;
+  min-width: 260px;
   background-color: var(--basic-gray);
   color: var(--basic-black);
 }
@@ -1117,7 +1120,7 @@ img {
   display: grid;
   grid-template-columns: 358px 358px;
   grid-column-gap: 44px;
-  grid-row-gap: 30px;
+  grid-row-gap: 31px;
   margin: 0;
   margin-top: 49px;
   padding: 0;
