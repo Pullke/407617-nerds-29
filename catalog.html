@@ -12,133 +12,199 @@
 
   <header class="main-header">
     <nav class="main-navigation">
-      <!-- <div class="main-header-bar"> -->
-        <div class="main-navigation-wrapper">
-          <a href="index.html" class="main-header-logo">
-            <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс».">
-          </a>
-          <ul class="site-navigation">
-            <li><a class="site-navigation-link" href="">Студия</a></li>
-            <li><a class="site-navigation-link" href="">Клиенты</a></li>
-            <li><a class="site-navigation-link current-link">Магазин</a></li>
-            <li><a class="site-navigation-link" href="">Контакты</a></li>
-          </ul>
-          <!-- <div class="user-navigation"> -->
-            <ul class="user-cart">
-              <li><a class="user-navigation-link" href="">Корзина</a></li>
-            </ul>
-          <!-- </div> -->
-        </div>
-      <!-- </div> -->
+      <div class="main-navigation-wrapper">
+        <a href="index.html" class="main-header-logo">
+          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нёрдс».">
+        </a>
+        <ul class="site-navigation">
+          <li><a class="site-navigation-link" href="">Студия</a></li>
+          <li><a class="site-navigation-link" href="">Клиенты</a></li>
+          <li><a class="site-navigation-link current-link" href="">Магазин</a></li>
+          <li><a class="site-navigation-link" href="">Контакты</a></li>
+        </ul>
+      </div>
+      <ul class="user-navigation">
+        <li><a class="user-navigation-link" href="">Корзина</a></li>
+      </ul>
     </nav>
   </header>
 
   <main class="page-catalog">
 
-    <div class="page-title-wrapper">
-      <h1 class="page-title">Магазин готовых шаблонов</h1>
-    </div>
+    <h1 class="page-title">Магазин готовых шаблонов</h1>
 
     <div class="container">
-      <div class="catalog-container-wrapper">
+      <div class="catalog-container">
         <section class="filters">
           <h2 class="visually-hidden">Фильтры</h2>
-
-          <!-- Здесь будет форма -->
-
           <div class="catalog-form-wrapper">
-            <p class="catalog-form-title">Стоимость:</p>
+            <form class="" action="https://echo.htmlacademy.ru" method="get">
+              <fieldset class="filter-item">
+                <legend>Стоимость:</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="width: 70%"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0" style=""></div>
+                    <div class="toggle toggle-max" tabindex="0" style=""></div>
+                  </div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="number" name="max-price" value="15000">
+                  </label>
+                </div>
+
+                <div class="radio-wrap">
+                  <legend>Сетка:</legend>
+                  <label class="check option">
+                    <input class="radio-input visually-hidden" type="radio" name="grid" value="adaptive" checked>
+                    <span class="radio"></span>
+                    Адаптивная
+                  </label>
+                  <label class="check option" class="check option">
+                    <input class="radio-input visually-hidden" type="radio" name="grid" value="fixed">
+                    <span class="radio"></span>
+                    Фиксированная
+                  </label>
+                  <label class="check option">
+                    <input class="radio-input visually-hidden" type="radio" name="grid" value="stretch">
+                    <span class="radio"></span>
+                    Резиновая
+                  </label>
+                </div>
+
+                <div class="checkbox-wrap">
+                  <legend>Особенности:</legend>
+                  <label class="check option">
+                    <input class="check-input visually-hidden" type="checkbox" name="slider" checked>
+                    <span class="check-box"></span>
+                    Слайдер
+                  </label>
+                  <label class="check option">
+                    <input class="check-input visually-hidden" type="checkbox" name="features">
+                    <span class="check-box"></span>
+                    Блок преимуществ
+                  </label>
+                  <label class="check option">
+                    <input class="check-input visually-hidden" type="checkbox" name="news" checked>
+                    <span class="check-box"></span>
+                    Новости
+                  </label>
+                  <label class="check option">
+                    <input class="check-input visually-hidden" type="checkbox" name="gallery">
+                    <span class="check-box"></span>
+                    Галерея
+                  </label>
+                  <label class="check option">
+                    <input class="check-input visually-hidden" type="checkbox" name="cart">
+                    <span class="check-box"></span>
+                    Корзина
+                  </label>
+                </div>
+              </fieldset>
+              <button class="button filter-button" type="submit">Показать</button>
+            </form>
           </div>
         </section>
 
         <section class="catalog">
           <h2 class="visually-hidden">Каталог</h2>
-          <div class="catalog-wrapper">
-
+            <div class="catalog-wrapper">
             <div class="catalog-sorting-wrapper">
               <p class="sorting-title">Сортировать:</p>
               <ul class="sorting-list">
                 <li class="sorting-item">
-                  <a class="sorting-link current" href="">По цене</a>
+                  <button class="sorting-link current" type="button">По цене</button>
                 </li>
                 <li class="sorting-item">
-                  <a class="sorting-link" href="">По типу</a>
+                  <button class="sorting-link" type="button">По типу</button>
                 </li>
                 <li class="sorting-item">
-                  <a class="sorting-link" href="">По названию</a>
+                  <button class="sorting-link" type="button">По названию</button>
                 </li>
               </ul>
 
               <!-- Кнопки сортировки -->
 
               <ul class="sorting-switch">
-                <li class="button-down">
-                  <button type="button"></button>
+                <li>
+                  <button class="button-down current" type="button"></button>
                 </li>
-                <li class="button-up">
-                  <button type="button"></button>
+                <li>
+                  <button class="button-up" type="button"></button>
                 </li>
               </ul>
             </div>
 
             <ul class="catalog-list">
               <li class="catalog-item">
+                <div class="decoration-circle"></div>
                 <img src="img/layout-sedona-min.jpg" width="358" height="578" alt="Макет сайта «Sedona».">
                 <div class="catalog-item-popup">
                   <h3 class="catalog-popup-title">
                     <a href="">Sedona</a>
                   </h3>
-                  <p class="catalog-popup-text">Информационный сайт для туристов</p>
+                  <p class="catalog-popup-text">Информационный сайт <br> для туристов</p>
                   <a class="button modal-button" href="">9 900 ₽</a>
                 </div>
               </li>
               <li class="catalog-item">
+                <div class="decoration-circle"></div>
                 <img src="img/layout-pink-min.jpg" width="358" height="578" alt="Макет сайта «Pink».">
                 <div class="catalog-item-popup">
                   <h3 class="catalog-popup-title">
                     <a href="">Pink App</a>
                   </h3>
-                  <p class="catalog-popup-text">Продуктовый лендинг приложения для iOS и Android</p>
+                  <p class="catalog-popup-text">Продуктовый лендинг <br> приложения для iOS и Android</p>
                   <a class="button modal-button" href="">9 900 ₽</a>
                 </div>
               </li>
               <li class="catalog-item">
+                <div class="decoration-circle"></div>
                 <img src="img/layout-borodinski-min.jpg" width="358" height="578" alt="Макет сайта «Бородинский».">
                 <div class="catalog-item-popup">
                   <h3 class="catalog-popup-title">
                     <a href="">Barbershop</a>
                   </h3>
-                  <p class="catalog-popup-text">Сайт салона красоты. Для мужчин, да.</p>
+                  <p class="catalog-popup-text">Сайт салона красоты. <br> Для мужчин, да.</p>
                   <a class="button modal-button" href="">9 900 ₽</a>
                 </div>
               </li>
               <li class="catalog-item">
+                <div class="decoration-circle"></div>
                 <img src="img/layout-mishka-min.jpg" width="358" height="578" alt="Макет сайта «Mishka».">
                 <div class="catalog-item-popup">
                   <h3 class="catalog-popup-title">
                     <a href="">Mishka</a>
                   </h3>
-                  <p class="catalog-popup-text">Интернет-магазин вязаных игрушек</p>
+                  <p class="catalog-popup-text">Интернет-магазин <br> вязаных игрушек</p>
                   <a class="button modal-button" href="">9 900 ₽</a>
                 </div>
               </li>
               <li class="catalog-item">
+                <div class="decoration-circle"></div>
                 <img src="img/layout-aplus-min.jpg" width="358" height="578" alt="Макет сайта «А Плюс».">
                 <div class="catalog-item-popup">
                   <h3 class="catalog-popup-title">
                     <a href="">A Plus</a>
                   </h3>
-                  <p class="catalog-popup-text">Лендинг курсов повышения квалификации</p>
+                  <p class="catalog-popup-text">Лендинг курсов повышения <br> квалификации</p>
                   <a class="button modal-button" href="">9 900 ₽</a>
                 </div>
               </li>
               <li class="catalog-item">
+                <div class="decoration-circle"></div>
                 <img src="img/layout-kvast-min.jpg" width="358" height="578" alt="Макет сайта «Кваст».">
                 <div class="catalog-item-popup">
                   <h3 class="catalog-popup-title">
                     <a href="">Кваст</a>
                   </h3>
-                  <p class="catalog-popup-text">Промо-сайт производителя крафтового кваса</p>
+                  <p class="catalog-popup-text">Промо-сайт производителя <br> крафтового кваса</p>
                   <a class="button modal-button" href="">9 900 ₽</a>
                 </div>
               </li>
@@ -172,7 +238,6 @@
       <div class="contacts-box-wrapper">
         <div class="contacts-box">
           <h3 class="contacts-title">Nёrds design studio</h3>
-          <!-- <div class="contacts-text"> -->
             <p class="contacts-adress">
               191186, Санкт-Петербург, <br>
               ул. Б. Конюшенная, д. 19/8
@@ -181,7 +246,6 @@
               тел.
               <a href="tel:+78122757575">+7 (812) 275-75-75</a>
             </p>
-          <!-- </div> -->
           <a class="button button-contacts" href="">Напишите нам</a>
         </div>
       </div>
@@ -215,10 +279,24 @@
     </section>
   </footer>
 
-  <section class="modal modal-form">
-    <h2 class="modal-form-title">Напишите нам</h2>
-    <!-- Здесь будет форма -->
-    <button class="button modal-form-button" type="submit">Отправить</button>
+  <section class="modal">
+    <h2 class="visually-hidden">Форма для отправки контактов</h2>
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <legend>Напишите нам</legend>
+      <fieldset>
+        <label class="name">Ваше имя: <br>
+          <input type="text" name="name" placeholder="Имя Фамилия">
+        </label>
+        <label class="email">Ваш email: <br>
+          <input type="email" name="email" placeholder="email@example.com" title="Не верный формат ввода" required>
+        </label>
+        <label class="text">Текст письма: <br>
+          <textarea name="text" rows="6" cols="" placeholder="В свободной форме"></textarea>
+        </label>
+      </fieldset>
+      <button class="button" type="submit">Отправить</button>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </form>
   </section>
 </body>
 </html>

@@ -216,10 +216,24 @@
     </section>
   </footer>
 
-  <section class="modal modal-form">
-    <h2 class="modal-form-title">Напишите нам</h2>
-    <!-- Здесь будет форма -->
-    <button class="button modal-form-button" type="submit">Отправить</button>
+  <section class="modal">
+    <h2 class="visually-hidden">Форма для отправки контактов</h2>
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <legend>Напишите нам</legend>
+      <fieldset>
+        <label class="name">Ваше имя: <br>
+          <input type="text" name="name" placeholder="Имя Фамилия">
+        </label>
+        <label class="email">Ваш email: <br>
+          <input type="email" name="email" placeholder="email@example.com"><!--title="Не верный формат ввода" required-->
+        </label>
+        <label class="text">Текст письма: <br>
+          <textarea name="text" rows="6" cols="" placeholder="В свободной форме"></textarea>
+        </label>
+      </fieldset>
+      <button class="button" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 </body>
 
