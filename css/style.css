@@ -1092,8 +1092,6 @@ img {
   opacity: .6;
 }
 
-/* Придумать решение */
-
 .current,
 .sorting-link:active,{
   color: var(--basic-black);
