@@ -293,8 +293,10 @@ img {
 }
 
 .slide-title {
+  outline: 2px solid black;
   margin: 0;
   padding: 78px 0 25px;
+  width: 540px;
   font-size: 55px;
   line-height: 56px;
   font-weight: 500;
@@ -302,12 +304,15 @@ img {
 }
 
 .slide-text {
+  outline: 2px solid black;
   margin: 0;
   padding-bottom: 38px;
+  width: 540px;
   line-height: 25px;
 }
 
 .button-slide {
+  /* margin-bottom: 80px; */
   width: 240px;
 }
 
@@ -936,46 +941,6 @@ img {
   user-select: none;
 }
 
-.check-box {
-  position: absolute;
-  margin-left: -36px;
-  width: 25px;
-  height: 25px;
-  background-image: url(../img/checkbox-off.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-color: var(--basic-white);
-}
-
-.check-input + .check-box {
-  opacity: .4;
-}
-
-.check-input:checked + .check-box {
-  background-image: url(../img/checkbox-on.svg);
-  background-color: var(--basic-white);
-  opacity: 1;
-}
-
-.check-input:hover + .check-box,
-.check-input:focus + .check-box {
-  background-image: url(../img/checkbox-off.svg);
-  background-color: var(--basic-white);
-  opacity: 1;
-}
-
-.check-input:checked:hover + .check-box,
-.check-input:checked:focus + .check-box {
-  background-image: url(../img/checkbox-on.svg);
-  background-color: var(--basic-white);
-  opacity: 1;
-}
-
-.check-input:disabled + .check-box {
-  opacity: .1;
-}
-
-
 .radio {
   position: absolute;
   margin-left: -36px;
@@ -993,7 +958,7 @@ img {
 .radio-input:checked + .radio {
   background-image: url(../img/radio-on.svg);
   background-color: var(--basic-white);
-  opacity: 1;
+  opacity: .4;
 }
 
 .radio-input:hover + .radio,
@@ -1016,6 +981,46 @@ img {
 
 .option:last-child {
   margin-bottom: 0;
+}
+
+.check-box {
+  position: absolute;
+  margin-left: -36px;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: var(--basic-white);
+}
+
+.check-input + .check-box {
+  opacity: .4;
+}
+
+.check-input:checked + .check-box {
+  background-image: url(../img/checkbox-on.svg);
+  background-color: var(--basic-white);
+  opacity: .4;
+}
+
+.check-input:hover + .check-box,
+.check-input:focus + .check-box {
+  background-image: url(../img/checkbox-off.svg);
+  background-color: var(--basic-white);
+  opacity: 1;
+}
+
+.check-input:checked:hover + .check-box,
+.check-input:checked:focus + .check-box {
+  background-image: url(../img/checkbox-on.svg);
+  background-color: var(--basic-white);
+  opacity: 1;
+}
+
+.check-input:disabled + .check-box {
+  opacity: .1;
+  cursor: default;
 }
 
 .filter-button {
@@ -1069,6 +1074,7 @@ img {
 
 .sorting-item {
   padding-right: 25px;
+  cursor: pointer;
 }
 
 .sorting-item:last-child {
@@ -1093,7 +1099,7 @@ img {
 }
 
 .current,
-.sorting-link:active,{
+.sorting-link:active, {
   color: var(--basic-black);
   opacity: 1;
 }
@@ -1116,6 +1122,7 @@ img {
   background-image: url(../img/icon-down-dir.svg);
   background-color: var(--basic-white);
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .sorting-switch .button-up {
@@ -1125,6 +1132,7 @@ img {
   background-image: url(../img/icon-up-dir.svg);
   background-color: var(--basic-white);
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .switch {
