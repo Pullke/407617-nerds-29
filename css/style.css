@@ -307,6 +307,7 @@ img {
 .button-slide {
   margin-bottom: 80px;
   padding: 16px 54px;
+  /* max-width: 25%; */
 }
 
 .slide-one {
@@ -403,17 +404,17 @@ img {
 }
 
 .features-item {
-  margin-right: 100px;
+  width: 300px;
   margin-bottom: 80px;
+  margin-right: 100px;
+}
 
+.features-item:nth-child(3) {
+  margin-right: 0;
 }
 
 .features-item img {
   margin-bottom: 18px;
-}
-
-.features-item:nth-child(3n) {
-  margin-right: 0;
 }
 
 .features-title {
@@ -433,6 +434,10 @@ img {
 }
 
 /* Features button */
+
+.button-web {
+  /* max-width: 25%; */
+}
 
 .button-apps {
   background-color: var(--basic-green);
@@ -597,7 +602,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 298px;
+  /* width: 298px; */
   min-height: 180px;
   flex-grow: 1;
   position: relative;
