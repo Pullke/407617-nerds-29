@@ -64,13 +64,13 @@
 
         <ul class="slider-controls">
           <li>
-            <button class="current" type="button" aria-label="Первый слайд"></button>
+            <button class="slider-switch slider-switch-active" type="button" aria-label="Первый слайд"></button>
           </li>
           <li>
-            <button type="button" aria-label="Второй слайд"></button>
+            <button class="slider-switch" type="button" aria-label="Второй слайд"></button>
           </li>
           <li>
-            <button type="button" aria-label="Третий слайд"></button>
+            <button class="slider-switch" type="button" aria-label="Третий слайд"></button>
           </li>
         </ul>
       </div>
@@ -169,8 +169,6 @@
       <h2 class="visually-hidden">Контактная информация</h2>
 
       <div class="contacts-box-wrapper">
-        <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac27c31cb15bc876d97e1889323819c8aa32601c864ca43c40e073a2b5ab17050&amp;source=constructor" width="100%" height="416" frameborder="0"></iframe> -->
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.32085871621117!3d59.9387191690541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1601922351729!5m2!1sru!2sru" width="100%" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
         <div class="contacts-box">
           <h3 class="contacts-title">Nёrds design studio</h3>
           <p class="contacts-adress">
@@ -220,19 +218,19 @@
       <fieldset>
         <legend>Напишите нам</legend>
         <label class="name">Ваше имя: <br>
-          <input type="text" name="name" placeholder="Имя Фамилия">
+          <input class="name-user" type="text" name="name" placeholder="Имя Фамилия">
         </label>
         <label class="email">Ваш email: <br>
-          <input type="email" name="email" placeholder="email@example.com"><!--title="Не верный формат ввода" required-->
+          <input class="email-user" type="email" name="email" placeholder="email@example.com"><!--title="Не верный формат ввода" required-->
         </label>
         <label class="text">Текст письма: <br>
           <textarea name="text" rows="6" placeholder="В свободной форме"></textarea>
         </label>
       </fieldset>
-      <button class="button" type="submit">Отправить</button>
+      <button class="button button-modal" type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
+  <script src="js/form.js"></script>
 </body>
-
 </html>
