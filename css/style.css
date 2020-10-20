@@ -437,9 +437,6 @@ img {
 
 /* Features button */
 
-.button-web {
-  /* max-width: 25%; */
-}
 
 .button-apps {
   background-color: var(--basic-green);
