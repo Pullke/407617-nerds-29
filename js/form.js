@@ -9,17 +9,6 @@ let isStorageSupport = true;
 const storage = '';
 
 
-const slide = document.querySelector('.slider-item');
-const sliderSwitch = document.querySelector('.slider-switch');
-
-sliderSwitch.onclick = function () {
-  console.log('Кнопка нажата!');
-  sliderSwitch.classList.toggle('slider-switch-active')
-  slide.classList.toggle('slide-current');
-};
-
-
-
 try {
   storage = localStorage.getItem('form');
 } catch (err) {
