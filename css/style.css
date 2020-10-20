@@ -656,6 +656,12 @@ img {
   background-position: center;
 }
 
+.contacts iframe {
+  width: 100%;
+  height: 416px;
+  position: absolute;
+}
+
 .contacts-box-wrapper {
   display: flex;
   width: 1160px;
@@ -664,6 +670,7 @@ img {
 }
 
 .contacts-box {
+  z-index: 1;
   width: 219px;
   margin: 54px 0;
   padding: 49px 50px 47px;
@@ -714,7 +721,6 @@ img {
   width: 1160px;
   display: flex;
   justify-content: flex-start;
-  /* align-items: center; */
   margin: 68px auto 55px;
   padding: 0 20px;
 }
@@ -1224,7 +1230,6 @@ img {
 }
 
 .catalog-item-popup {
-  visibility: hidden;
   position: absolute;
   width: inherit;
   bottom: 0;
@@ -1232,18 +1237,18 @@ img {
   text-align: center;
   background-color: var(--basic-gray);
   border-radius: 0 0 5px 5px;
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
 }
 
-.catalog-item:hover > .catalog-item-popup {
-  visibility: visible;
+.catalog-item:hover .catalog-item-popup,
+.catalog-item:focus-within .catalog-item-popup {
+  opacity: 1;
 }
-
-/* .catalog-item-popup:focus {
-  visibility: visible;
-} */
 
 .catalog-item:hover {
   background-color: var(--special);
+  transition: background-color .6s ease-in-out;
 }
 
 .catalog-popup-title {
@@ -1252,6 +1257,7 @@ img {
   margin: 0;
   margin-bottom: 12px;
   padding: 0;
+  transition: opacity .6s ease-in-out;
 }
 
 .catalog-popup-title a {
