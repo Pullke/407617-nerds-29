@@ -219,6 +219,7 @@ img {
 /* Button */
 .button {
   display: inline-block;
+  vertical-align: top;
   padding: 17px 40px 15px 39px;
   font-size: 16px;
   line-height: 18px;
@@ -352,6 +353,11 @@ img {
   outline: none;
   cursor: pointer;
 }
+
+.slider-switch:focus {
+  box-shadow: 0 3px 2px 0 var(--shadow);
+}
+
 
 .slider-switch-active:after {
   content: "";
@@ -1304,12 +1310,14 @@ img {
 
 .pagination-button {
   display: inline-block;
+  vertical-align: top;
   padding: 17px 20px 15px;
   color: var(--basic-black);
 }
 
 .pagination-button-next {
   display: inline-block;
+  vertical-align: top;
   margin-right: 0;
   padding-left: 58px;
   padding-right: 57px;

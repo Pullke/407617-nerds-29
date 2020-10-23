@@ -18,6 +18,7 @@ const switchTwo = slider.querySelector('.slider-switch-two');
 const switchThree = slider.querySelector('.slider-switch-three');
 
 
+
 switchOne.addEventListener('click', function(evt) {
   evt.preventDefault();
 
@@ -53,6 +54,8 @@ switchThree.addEventListener('click', function(evt) {
   switchTwo.classList.remove('slider-switch-active');
   slideTwo.classList.remove('slide-visible');
 });
+
+
 
 try {
   storage = localStorage.getItem('form');
