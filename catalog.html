@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body inner-page">
@@ -37,7 +37,7 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
         <form class="" action="https://echo.htmlacademy.ru" method="get" target="_blank">
-          <fieldset class="filter-item">
+          <fieldset class="filter-item filter-item-price">
             <legend>Стоимость:</legend>
             <div class="range-filter">
               <div class="range-controls">
@@ -56,15 +56,17 @@
                 до <input type="number" name="max-price" value="15000">
               </label>
             </div>
+          </fieldset>
 
-            <p class="radio-title">Сетка:</p>
+          <fieldset class="filter-item filter-item-radio">
+            <legend class="radio-title">Сетка:</legend>
             <label class="option">
               <input class="radio-input visually-hidden" type="radio" name="grid" value="adaptive" checked>
               <span class="radio"></span>
               Адаптивная
             </label>
             <label class="option">
-              <input class="radio-input visually-hidden" type="radio" name="grid" value="fixed">
+              <input class="radio-input visually-hidden" type="radio" name="grid" value="fixed" disabled>
               <span class="radio"></span>
               Фиксированная
             </label>
@@ -73,15 +75,17 @@
               <span class="radio"></span>
               Резиновая
             </label>
+          </fieldset>
 
-            <p class="checkbox-title">Особенности:</p>
+          <fieldset class="filter-item filter-item-checkbox">
+            <legend  class="checkbox-title">Особенности:</legend>
             <label class="option">
               <input class="check-input visually-hidden" type="checkbox" name="slider" checked>
               <span class="check-box"></span>
               Слайдер
             </label>
             <label class="option">
-              <input class="check-input visually-hidden" type="checkbox" name="features">
+              <input class="check-input visually-hidden" type="checkbox" name="features" disabled>
               <span class="check-box"></span>
               Блок преимуществ
             </label>
@@ -126,10 +130,10 @@
 
             <ul class="sorting-switch">
               <li class="switch current">
-                <button class="button-down" type="button"></button>
+                <button class="button-down" type="button" aria-label="Вверх"></button>
               </li>
               <li class="switch">
-                <button class="button-up" type="button"></button>
+                <button class="button-up" type="button" aria-label="Вниз"></button>
               </li>
             </ul>
           </div>
@@ -222,7 +226,7 @@
     </div>
   </main>
 
-  <footer class="catalog-footer main-footer">
+  <footer class="page-footer inner-footer">
     <section class="contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
       <iframe src="https://yandex.ru/map-widget/v1/-/CCQ~yQx1TD" tabindex="-1"></iframe>
@@ -285,11 +289,11 @@
           <textarea name="text" rows="6" placeholder="В свободной форме"></textarea>
         </label>
       </fieldset>
-      <button class="button button-modal" type="submit">Отправить</button>
+      <button class="button button-modal" type="submit" aria-label="Отправить форму">Отправить</button>
     </form>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
-  <script src="js/script.min.js"></script>
+  <script src="js/form.min.js"></script>
 </body>
 
 </html>
