@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body inner-page">
@@ -36,7 +36,7 @@
     <div class="container">
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
-        <form class="" action="https://echo.htmlacademy.ru" method="get" target="_blank">
+        <form action="https://echo.htmlacademy.ru" method="get" target="_blank">
           <fieldset class="filter-item filter-item-price">
             <legend>Стоимость:</legend>
             <div class="range-filter">
@@ -63,17 +63,17 @@
             <label class="option">
               <input class="radio-input visually-hidden" type="radio" name="grid" value="adaptive" checked>
               <span class="radio"></span>
-              Адаптивная
+              <span>Адаптивная</span>
             </label>
             <label class="option">
-              <input class="radio-input visually-hidden" type="radio" name="grid" value="fixed" disabled>
+              <input class="radio-input visually-hidden" type="radio" name="grid" value="fixed">
               <span class="radio"></span>
-              Фиксированная
+              <span>Фиксированная</span>
             </label>
             <label class="option">
               <input class="radio-input visually-hidden" type="radio" name="grid" value="stretch">
               <span class="radio"></span>
-              Резиновая
+              <span>Резиновая</span>
             </label>
           </fieldset>
 
@@ -82,27 +82,27 @@
             <label class="option">
               <input class="check-input visually-hidden" type="checkbox" name="slider" checked>
               <span class="check-box"></span>
-              Слайдер
+              <span>Слайдер</span>
             </label>
             <label class="option">
-              <input class="check-input visually-hidden" type="checkbox" name="features" disabled>
+              <input class="check-input visually-hidden" type="checkbox" name="features">
               <span class="check-box"></span>
-              Блок преимуществ
+              <span>Блок преимуществ</span>
             </label>
             <label class="option">
               <input class="check-input visually-hidden" type="checkbox" name="news" checked>
               <span class="check-box"></span>
-              Новости
+              <span>Новости</span>
             </label>
             <label class="option">
               <input class="check-input visually-hidden" type="checkbox" name="gallery">
               <span class="check-box"></span>
-              Галерея
+              <span>Галерея</span>
             </label>
             <label class="option">
               <input class="check-input visually-hidden" type="checkbox" name="cart">
               <span class="check-box"></span>
-              Корзина
+              <span>Корзина</span>
             </label>
           </fieldset>
           <button class="button filter-button" type="submit">Показать</button>

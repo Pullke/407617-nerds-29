@@ -915,6 +915,16 @@ img {
   user-select: none;
 }
 
+.radio-input:disabled ~ span {
+  opacity: .4;
+  cursor: default;
+}
+
+.check-input:disabled ~ span {
+  opacity: .4;
+  cursor: default;
+}
+
 .radio {
   position: absolute;
   margin-left: -36px;
@@ -1261,6 +1271,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-top: 54px;
+  margin-bottom: 49px;
   padding: 0;
   list-style: none;
 }
