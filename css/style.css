@@ -905,7 +905,19 @@ img {
   background: var(--basic-gray);
 }
 
+/* Filter list */
+.filter-item ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter-item li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .option {
+  position: relative;
   display: block;
   margin-bottom: 16px;
   padding-left: 36px;
@@ -915,64 +927,60 @@ img {
   user-select: none;
 }
 
-.radio-input:disabled ~ span {
-  opacity: .4;
-  cursor: default;
-}
-
-.check-input:disabled ~ span {
-  opacity: .4;
-  cursor: default;
-}
-
-.radio {
-  position: absolute;
-  margin-left: -36px;
-  width: 25px;
-  height: 25px;
-  background-image: url(../img/radio-off.svg);
-  background-repeat: no-repeat;
-  background-color: var(--basic-white);
-}
-
-
-.radio-input + .radio {
-  opacity: .4;
-}
-
-.radio-input:checked + .radio {
-  background-image: url(../img/radio-on.svg);
-  background-color: var(--basic-white);
-  opacity: .4;
-}
-
-.radio-input:hover + .radio,
-.radio-input:focus + .radio {
-  background-image: url(../img/radio-off.svg);
-  background-color: var(--basic-white);
-  opacity: 1;
-}
-
-.radio-input:checked:hover + .radio,
-.radio-input:checked:focus + .radio {
-  background-image: url(../img/radio-on.svg);
-  background-color: var(--basic-white);
-  opacity: 1;
-}
-
-.radio-input:disabled + .radio,
-.radio-input:checked:disabled + .radio,
-.radio-input:disabled:hover + .radio,
-.radio-input:disabled:focus + .radio {
-  opacity: .1;
-  cursor: default;
-}
-
 .option:last-child {
   margin-bottom: 0;
 }
 
-.check-box {
+/* Filter radio */
+.radio-input + .option:before {
+  content: "";
+  position: absolute;
+  margin-left: -36px;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  background-image: url(../img/radio-off.svg);
+  background-repeat: no-repeat;
+  background-color: var(--basic-white);
+  opacity: .4;
+}
+
+.radio-input:checked + .option:before {
+  background-image: url(../img/radio-on.svg);
+  background-color: var(--basic-white);
+  opacity: .4;
+}
+
+.radio-input:hover + .option:before,
+.radio-input:focus + .option:before {
+  background-image: url(../img/radio-off.svg);
+  background-color: var(--basic-white);
+  opacity: 1;
+}
+
+.radio-input:checked:hover + .option:before,
+.radio-input:checked:focus + .option:before {
+  background-image: url(../img/radio-on.svg);
+  background-color: var(--basic-white);
+  opacity: 1;
+}
+
+.radio-input:disabled + .option:before,
+.radio-input:checked:disabled + .option:before,
+.radio-input:disabled:hover + .option:before,
+.radio-input:disabled:focus + .option:before {
+  opacity: .5;
+  cursor: default;
+}
+
+.radio-input:disabled + .option {
+  opacity: .3;
+  cursor: default;
+}
+
+/* Filter checkbox */
+.check-input + .option:before {
+  content: "";
   position: absolute;
   margin-left: -36px;
   width: 25px;
@@ -981,40 +989,43 @@ img {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-color: var(--basic-white);
-}
-
-.check-input + .check-box {
   opacity: .4;
 }
 
-.check-input:checked + .check-box {
+.check-input:checked + .option:before {
   background-image: url(../img/checkbox-on.svg);
   background-color: var(--basic-white);
   opacity: .4;
 }
 
-.check-input:hover + .check-box,
-.check-input:focus + .check-box {
+.check-input:hover + .option:before,
+.check-input:focus + .option:before {
   background-image: url(../img/checkbox-off.svg);
   background-color: var(--basic-white);
   opacity: 1;
 }
 
-.check-input:checked:hover + .check-box,
-.check-input:checked:focus + .check-box {
+.check-input:checked:hover + .option:before,
+.check-input:checked:focus + .option:before {
   background-image: url(../img/checkbox-on.svg);
   background-color: var(--basic-white);
   opacity: 1;
 }
 
-.check-input:disabled + .check-box,
-.check-input:checked:disabled + .check-box,
-.check-input:disabled:hover + .check-box,
-.check-input:disabled:focus + .check-box {
-  opacity: .1;
+.check-input:disabled + .option:before,
+.check-input:checked:disabled + .option:before,
+.check-input:disabled:hover + .option:before,
+.check-input:disabled:focus + .option:before {
+  opacity: .5;
   cursor: default;
 }
 
+.check-input:disabled + .option {
+  opacity: .3;
+  cursor: default;
+}
+
+/* Filter button */
 .filter-button {
   margin-top: 47px;
   padding: 17px 89px 15px 88px;
@@ -1034,6 +1045,7 @@ img {
   opacity: .3;
 }
 
+/* Catalog wrapper */
 .catalog-wrapper {
   width: 760px;
 }
@@ -1341,6 +1353,7 @@ img {
   opacity: 1;
 }
 
+/* Modal */
 .modal {
   display: none;
   z-index: 20;
@@ -1397,7 +1410,6 @@ img {
 .modal-form input,
 .modal-form textarea {
   margin-top: 9px;
-
   background: var(--basic-white);
   border: 2px solid var(--basic-form-border);
   box-sizing: border-box;
@@ -1418,16 +1430,17 @@ img {
   resize: none;
 }
 
+.modal-form input:hover,
+.modal-form textarea:hover {
+  border-color: var(--hover-form-border);
+}
+
 .modal-form input:focus,
 .modal-form input:active,
 .modal-form textarea:focus,
 .modal-form textarea:active {
   color: var(--active-form-field);
-}
-
-.modal-form input:hover,
-.modal-form textarea:hover {
-  border-color: var(--hover-form-border);
+  border-color: var(--basic-black);
 }
 
 .modal-form input:invalid,
