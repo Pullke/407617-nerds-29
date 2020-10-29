@@ -29,6 +29,7 @@
   --pagination-active: rgb(219, 219, 219);
   --inner-shadow: rgba(0, 1, 1, .1);
   --contacts-text: rgb(102, 102, 102);
+  --opacity-text: rgb(167, 167, 167);
   --special: rgb(77, 77, 77);
 }
 
@@ -178,32 +179,11 @@ img {
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
-  padding-left: 40px;
   list-style: none;
 }
 
-/* Pseudo-class navigation */
-.site-navigation-link,
 .user-navigation-link {
-  color: var(--basic-black);
-}
-
-.site-navigation-link:hover,
-.user-navigation-link:hover {
-  color: var(--basic-red);
-}
-
-.site-navigation-link:active,
-.user-navigation-link:active {
-  color: var(--basic-black);
-  opacity: .3;
-}
-
-.current-link:hover,
-.current-link:active {
-  color: var(--basic-black);
-  opacity: 1;
-  user-select: none;
+  padding-left: 40px;
 }
 
 .user-navigation-link:before {
@@ -214,6 +194,33 @@ img {
   left: 0;
   width: 15px;
   height: 15px;
+}
+
+.site-navigation-link,
+.user-navigation-link {
+  color: var(--basic-black);
+}
+
+.site-navigation-link:hover,
+.user-navigation-link:hover {
+  color: var(--basic-red);
+}
+
+.site-navigation-link:active {
+  color: var(--basic-black);
+  opacity: .3;
+}
+
+
+.user-navigation-link:active {
+  color: var(--opacity-text);
+}
+
+.current-link:hover,
+.current-link:active {
+  color: var(--basic-black);
+  opacity: 1;
+  user-select: none;
 }
 
 /* Button */
@@ -1415,6 +1422,7 @@ img {
   box-sizing: border-box;
   border-radius: 3px;
   color: var(--basic-form-field);
+  outline: none;
 }
 
 .modal-form input {
@@ -1441,6 +1449,7 @@ img {
 .modal-form textarea:active {
   color: var(--active-form-field);
   border-color: var(--basic-black);
+  outline: none;
 }
 
 .modal-form input:invalid,
